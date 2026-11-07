@@ -41,6 +41,20 @@
     .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px}.about-copy{font-size:13px;color:var(--muted)}.about-copy .lead{font:23px/1.4 var(--serif);color:var(--ink)}.skill-groups{border-top:1px solid var(--line)}.skill{display:grid;grid-template-columns:130px 1fr;gap:15px;padding:12px 0;border-bottom:1px solid var(--line)}.skill h3{font:9px var(--mono);text-transform:uppercase;color:var(--green);margin:3px 0}.skill p{font-size:11px;color:var(--muted);margin:0}
     .timeline{border-top:1px solid var(--line);margin-top:25px}.event{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}.event time{font:9px var(--mono);color:var(--accent);padding-top:4px}.event h3{font-size:18px;margin:0 0 4px}.event p{font-size:11px;color:var(--muted);margin:0}
     .honours{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:18px 0}.honour{padding:13px}.honour strong{font:18px var(--serif);font-weight:500}.honour p{font-size:10px;color:var(--muted);margin:6px 0 0}.credentials{display:flex;flex-wrap:wrap;gap:6px}.credential{font:8px var(--mono);text-decoration:none;padding:6px 8px}
+    .certificate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:32px 0}
+    .certificate-card{min-height:205px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:18px;background:var(--panel);border:1px solid var(--line);text-decoration:none;transition:transform .2s ease,border-color .2s ease}
+    .certificate-card:hover{transform:translateY(-3px);border-color:var(--accent)}
+    .certificate-card .cert-kind{font:9px var(--mono);letter-spacing:.06em;color:var(--accent);text-transform:uppercase}
+    .certificate-card svg{width:26px;height:26px;color:var(--green)}
+    .certificate-card strong{font:500 21px/1.12 var(--serif)}
+    .certificate-card .cert-detail{color:var(--muted);font-size:12px;line-height:1.5}
+    .certificate-card .cert-link{margin-top:auto;font:9px var(--mono);letter-spacing:.04em;color:var(--green)}
+    .certificate-card.training{background:var(--soft)}
+    .award-note{margin-top:42px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+    .award-note a{color:var(--ink)}
+    @media(max-width:700px){.certificate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:470px){.certificate-grid{grid-template-columns:1fr}.certificate-card{min-height:170px}}
+
     footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font:9px var(--mono)}.footer-inner{display:flex;justify-content:space-between;gap:10px}.version{user-select:none}
     .admin-message{background:var(--soft);border-left:3px solid var(--accent);padding:15px;font-size:12px;margin:16px 0}
     
@@ -134,6 +148,7 @@
       <a class="tab" data-tab="research" href="#research">03 RESEARCH & PAPERS</a>
       <a class="tab" data-tab="blog" href="#blog">04 BLOG & REVIEWS</a>
       <a class="tab" data-tab="about" href="#about">05 ABOUT & CV</a>
+      <a class="tab" data-tab="certifications" href="#certifications">06 CERTIFICATIONS</a>
     </nav>
     <div class="quick"><a href="https://github.com/nomansibly" aria-label="GitHub profile"><span class="external-label">GITHUB</span> ↗</a><a href="https://www.linkedin.com/in/nomansibly/" aria-label="LinkedIn profile"><span class="external-label">LINKEDIN</span> ↗</a><a class="print-button" id="download-cv" href="#" aria-label="Download Sibly Noman CV as a PDF">CV PDF ↓</a><button class="icon-button" id="theme" type="button" aria-label="Switch color theme" title="Switch theme">◐</button></div>
   </div></header>
@@ -278,6 +293,29 @@
         <div id="contact" class="contact" style="margin-top:42px"><div class="section-head"><div class="index">CONNECT</div><h2>Talk engineering</h2><p class="section-intro">Research, student projects and collaboration.</p></div><p>Find me through GitHub or LinkedIn.</p><a class="button btn" href="https://github.com/nomansibly">GITHUB PROFILE ↗</a></div>
       </div>
     </section>
+    <section class="panel" id="certifications" data-panel="certifications" hidden>
+      <div class="wrap">
+        <div class="section-head"><div class="index">06 / CREDENTIALS</div><h2>Certifications</h2><p class="section-intro">Selected credentials and specialist training. Open a verified record to view its certificate.</p></div>
+        <div class="certificate-grid">
+          <a class="certificate-card" href="https://www.credly.com/badges/31797b76-4f97-482b-bca4-4d282207a8e2/linked_in_profile" target="_blank" rel="noopener noreferrer">
+            <span class="cert-kind">Project management</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3.5h10v17l-5-3-5 3v-17Z" stroke="currentColor" stroke-width="1.4"/><path d="m9.5 10.5 1.7 1.7 3.5-3.7" stroke="currentColor" stroke-width="1.4"/></svg><strong>IPMA® Level D</strong><span class="cert-detail">Certified project management associate.</span><span class="cert-link">VIEW CREDENTIAL ↗</span>
+          </a>
+          <a class="certificate-card" href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-6ZTHWUCERX" target="_blank" rel="noopener noreferrer">
+            <span class="cert-kind">Mechanical design</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3.5h10v17l-5-3-5 3v-17Z" stroke="currentColor" stroke-width="1.4"/><path d="m9.5 10.5 1.7 1.7 3.5-3.7" stroke="currentColor" stroke-width="1.4"/></svg><strong>SOLIDWORKS certification</strong><span class="cert-detail">View the certification record from the credential verification service.</span><span class="cert-link">VERIFY CERTIFICATE ↗</span>
+          </a>
+          <a class="certificate-card" href="https://www.coursera.org/account/accomplishments/records/T6CPB2QMASGU" target="_blank" rel="noopener noreferrer">
+            <span class="cert-kind">Aerospace systems</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3.5h10v17l-5-3-5 3v-17Z" stroke="currentColor" stroke-width="1.4"/><path d="m9.5 10.5 1.7 1.7 3.5-3.7" stroke="currentColor" stroke-width="1.4"/></svg><strong>Autonomous Aerospace Systems</strong><span class="cert-detail">Course certificate · Coursera.</span><span class="cert-link">VIEW CERTIFICATE ↗</span>
+          </a>
+          <a class="certificate-card" href="https://www.coursera.org/account/accomplishments/records/JZGCSG8DEEWU" target="_blank" rel="noopener noreferrer">
+            <span class="cert-kind">Aircraft performance</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3.5h10v17l-5-3-5 3v-17Z" stroke="currentColor" stroke-width="1.4"/><path d="m9.5 10.5 1.7 1.7 3.5-3.7" stroke="currentColor" stroke-width="1.4"/></svg><strong>Flight Mechanics</strong><span class="cert-detail">Course certificate · Coursera.</span><span class="cert-link">VIEW CERTIFICATE ↗</span>
+          </a>
+          <article class="certificate-card training">
+            <span class="cert-kind">Manufacturing</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3.5h10v17l-5-3-5 3v-17Z" stroke="currentColor" stroke-width="1.4"/><path d="m9.5 10.5 1.7 1.7 3.5-3.7" stroke="currentColor" stroke-width="1.4"/></svg><strong>Metal cutting</strong><span class="cert-detail">Specialist training · Sandvik Coromant.</span><span class="cert-link">SPECIALIST TRAINING</span>
+          </article>
+        </div>
+        <p class="award-note">Awards: second place at the 2026 Finland Project Management Championship, Rookie Award at the 2024 Not-a-Boring Competition, and a global top-five result at the IMechE Sear Innovation Challenge. <a href="#about">See awards and experience in About & CV ↗</a></p>
+      </div>
+    </section>
   </main>
   <footer><div class="wrap footer-inner"><span><a href="/about-sibly-noman.html">About Sibly Noman</a> · <a href="/#research">Research</a> · <a href="/#portfolio">Projects</a></span><span>© <span id="year">2026</span> Sibly Noman · Engineering portfolio</span><span>Site version <span class="version" id="version" title="Portfolio version">05.0</span></span></div></footer>
   <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><span class="index" id="dialog-kind">PROJECT NOTE</span><button class="dialog-close" id="dialog-close" type="button">CLOSE ×</button></div><div class="dialog-body" id="dialog-body"></div></dialog>
@@ -293,7 +331,7 @@
         if(type==="project"){var media=card.querySelector(".media img");if(media){var box=document.createElement("div");box.className="modal-media";var clone=media.cloneNode();clone.loading="eager";box.append(clone);body.append(box)}var lead=card.querySelector(".project-content>p");if(lead){var p=document.createElement("p");p.textContent=lead.textContent;body.append(p)}var detail=card.querySelector(".project-detail");if(detail){detail.querySelectorAll("p").forEach(function(item){var p=document.createElement("p");p.innerHTML=item.innerHTML;body.append(p)})}var tags=card.querySelector(".tags");if(tags)body.append(tags.cloneNode(true));var links=card.querySelector(".links");if(links){var div=document.createElement("div");div.className="links";links.querySelectorAll("a").forEach(function(a){var c=a.cloneNode(true);if(c.getAttribute("href").startsWith("#"))return;div.append(c)});body.append(div)}}
         else {var article=window.ARTICLE_CONTENT&&window.ARTICLE_CONTENT[id];if(article){var lead=document.createElement("p");lead.className="article-dek";lead.textContent=article.dek;body.append(lead);article.sections.forEach(function(section){var sh=document.createElement("h3");sh.textContent=section.h;body.append(sh);var para=document.createElement("p");para.textContent=section.p;body.append(para)});if(article.refs&&article.refs.length){var rh=document.createElement("h3");rh.textContent="References & further reading";body.append(rh);var list=document.createElement("ul");article.refs.forEach(function(ref){var li=document.createElement("li"),a=document.createElement("a");a.href=ref[1];a.textContent=ref[0];a.target="_blank";a.rel="noopener noreferrer";li.append(a);list.append(li)});body.append(list)}}else{var missing=document.createElement("p");missing.textContent="This article is not available in this version.";body.append(missing)}}
         if(!dialog.open)dialog.showModal()}
-      function renderRoute(){var state=parseHash();var route=["portfolio","hardware","research","blog","about"].indexOf(state.route)>=0?state.route:"portfolio";currentRoute=route;panels.forEach(function(panel){panel.hidden=panel.dataset.panel!==route});tabs.forEach(function(tab){if(tab.dataset.tab===route)tab.setAttribute("aria-current","page");else tab.removeAttribute("aria-current")});document.title=(route==="portfolio"?"Portfolio":route==="hardware"?"Hardware & CAD":route==="research"?"Research & Papers":route==="blog"?"Blog & Reviews":"About & CV")+" | Sibly Noman";var item=state.project?{type:"project",id:state.project}:state.article?{type:"article",id:state.article}:null;if(item)openDetail(item.type,item.id);else if(dialog.open)dialog.close();window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})}
+      function renderRoute(){var state=parseHash();var route=["portfolio","hardware","research","blog","about","certifications"].indexOf(state.route)>=0?state.route:"portfolio";currentRoute=route;panels.forEach(function(panel){panel.hidden=panel.dataset.panel!==route});tabs.forEach(function(tab){if(tab.dataset.tab===route)tab.setAttribute("aria-current","page");else tab.removeAttribute("aria-current")});document.title=(route==="portfolio"?"Portfolio":route==="hardware"?"Hardware & CAD":route==="research"?"Research & Papers":route==="blog"?"Blog & Reviews":route==="certifications"?"Certifications":"About & CV")+" | Sibly Noman";var item=state.project?{type:"project",id:state.project}:state.article?{type:"article",id:state.article}:null;if(item)openDetail(item.type,item.id);else if(dialog.open)dialog.close();window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})}
       window.addEventListener("hashchange",renderRoute);
       document.getElementById("dialog-close").addEventListener("click",function(){dialog.close()});
       dialog.addEventListener("close",function(){var state=parseHash();if(state.project||state.article){history.replaceState(null,"","#"+currentRoute)}});

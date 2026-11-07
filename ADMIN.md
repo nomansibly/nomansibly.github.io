@@ -1,13 +1,15 @@
-# Updating your portfolio
+# Portfolio editor
 
-Open https://siblynoman2003-beep.github.io/admin.html
+The public portfolio is at https://nomansibly.github.io/.
 
-1. Edit the profile, projects, skills, education, research or contact fields.
-2. Use Preview changes. Switch between mobile and full-width previews.
-3. Save a draft on your device or download index.html as a backup.
-4. Click Publish instructions, copy the generated page, open the linked GitHub editor, replace the file contents and commit changes.
-5. Allow GitHub Pages a few minutes to deploy.
+## Open the editor
 
-The admin page is a browser-based editor, not a server-side CMS. Visitors can experiment locally but cannot change your live site without repository write access. GitHub handles authentication and permissions. Never paste access tokens into the website.
+Use Ctrl+Shift+A on the site, or double-click the small version number in the footer. The editor is intentionally unlinked and excluded from search indexing.
 
-Drafts are browser-local and do not automatically sync. Reload to start with the latest live site; restoring an older draft can overwrite newer content if subsequently published. Git history provides recovery for committed versions.
+## Update and publish
+
+The editor loads the current portfolio into a browser-local draft. It supports profile text, projects, skills, experience, publications, contact links, and the article-outline list. Preview the changes, save a local backup if useful, then choose **Publish instructions** to open the GitHub file editor. GitHub authentication and repository write permissions control the commit; GitHub Pages publishes the commit automatically.
+
+Project images can be uploaded through the GitHub media link in the editor, then referenced from project cards. The article cards are a roadmap and are labeled as outlines until full articles are written and checked.
+
+This static editor is not a password-protected CMS: it stores no credentials and cannot commit to GitHub by itself. GitHub's sign-in and repository permissions protect publishing. A server-backed CMS with Markdown, KaTeX and direct publishing needs a configured authentication provider and backend.

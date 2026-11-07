@@ -1,31 +1,29 @@
-# Sibly Noman — Engineering × Data
+# Sibly Noman — Engineering Portfolio
 
-[Visit the interactive portfolio](https://nomansibly.github.io/)
+[Open the portfolio](https://nomansibly.github.io/) · [GitHub profile](https://github.com/nomansibly) · [LinkedIn](https://www.linkedin.com/in/nomansibly/)
 
-A responsive, accessible professional portfolio showcasing mechanical engineering, numerical simulation, research and project leadership.
+A hand-built, responsive portfolio for mechanical engineering, CFD, thermal systems, aerospace research and project work.
 
-## Features
+## Site features
 
-- Filterable project gallery with live ThermoDC and Indoor Air Lab links.
-- Interactive heat/airflow energy-balance calculator with explicit assumptions.
-- Persistent light/dark theme, reduced-motion support and keyboard focus indicators.
-- Education, research milestones and project management experience.
-- Buildless HTML, CSS and JavaScript; no external libraries, analytics or API keys.
+- Case studies linked to source repositories, published outputs and live demonstrations.
+- Project filters by discipline.
+- Explicit model assumptions, evidence and limitations beside the relevant work.
+- Education, engineering roles, research papers, awards, memberships and selected credentials.
+- Print-friendly layout that can be saved as a PDF from the browser.
+- Keyboard focus styles, responsive layouts and reduced-motion support.
+- Plain HTML, CSS and JavaScript with no build step, external fonts, analytics or runtime dependencies.
 
 ## Run locally
 
 ```bash
-python -m http.server 8000
+python3 -m http.server 8000
 ```
 
-Open http://localhost:8000. GitHub Pages publishes `index.html` from the root of `main`.
+Open http://localhost:8000.
 
-## Maintenance
+## Publish
 
-Edit `index.html` to update content, styles or project links. Professional background is based on author-supplied information; repository project descriptions were checked against their READMEs. Concept projects are distinguished from executed numerical work. Do not present illustrative graphics or the mini calculator as validated simulation results.
+GitHub Pages serves the root of the `main` branch at [nomansibly.github.io](https://nomansibly.github.io/). Edit `index.html` and push to `main`; Pages publishes the update automatically.
 
-## Mini lab
-
-`temperature rise = heat load (kW) × 1000 / (1.2 × airflow (m³/s) × 1005)`
-
-Assumes constant air properties and complete sensible heat transfer. No equipment selection or operational safety claims.
+Project claims link to their repositories or publication records where available. Concept drawings are labeled as sketches; simulation results include the model's published scope and limitations.

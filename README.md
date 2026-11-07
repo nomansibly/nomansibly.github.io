@@ -1,18 +1,23 @@
 # Sibly Noman — Engineering Portfolio
 
-[Open the portfolio](https://nomansibly.github.io/) · [GitHub profile](https://github.com/nomansibly) · [LinkedIn](https://www.linkedin.com/in/nomansibly/)
+[Open the portfolio](https://nomansibly.github.io/) · [GitHub](https://github.com/nomansibly) · [LinkedIn](https://www.linkedin.com/in/nomansibly/)
 
-A hand-built, responsive portfolio for mechanical engineering, CFD, thermal systems, aerospace research and project work.
+A hand-built, responsive portfolio for mechanical engineering, CFD, thermal systems, aerospace research and engineering project work.
 
-## Site features
+## Website
 
-- Case studies linked to source repositories, published outputs and live demonstrations.
-- Project filters by discipline.
-- Explicit model assumptions, evidence and limitations beside the relevant work.
-- Education, engineering roles, research papers, awards, memberships and selected credentials.
-- Print-friendly layout that can be saved as a PDF from the browser.
-- Keyboard focus styles, responsive layouts and reduced-motion support.
-- Plain HTML, CSS and JavaScript with no build step, external fonts, analytics or runtime dependencies.
+- Five bookmarkable hash tabs: portfolio, hardware & CAD, research & papers, blog & reviews, and about & CV.
+- Project details open as shareable deep links such as `#portfolio?project=indoor-air-lab`.
+- Filterable project cards; selected source plots and project schematics; explicit evidence and model limits.
+- Twenty blog and aircraft-review outlines, labeled as outlines rather than published articles.
+- Light/dark theme, print-to-PDF layout, responsive navigation and reduced-motion support.
+- Plain HTML, CSS and JavaScript; no build step, tracking, external font service or runtime framework.
+
+## Content updates
+
+Use Ctrl+Shift+A on the site to open the unindexed browser editor. Drafts and previews stay in the browser until committed. The editor opens GitHub's file editor for publishing; GitHub account sign-in and repository write permissions control the commit. GitHub Pages then publishes the committed change.
+
+The editor is a static local-draft tool, not a server-side password CMS. Do not place passwords or access tokens in the website. A direct-publish CMS with Markdown, KaTeX rendering and secure media uploads requires an authenticated backend.
 
 ## Run locally
 
@@ -21,9 +26,3 @@ python3 -m http.server 8000
 ```
 
 Open http://localhost:8000.
-
-## Publish
-
-GitHub Pages serves the root of the `main` branch at [nomansibly.github.io](https://nomansibly.github.io/). Edit `index.html` and push to `main`; Pages publishes the update automatically.
-
-Project claims link to their repositories or publication records where available. Concept drawings are labeled as sketches; simulation results include the model's published scope and limitations.

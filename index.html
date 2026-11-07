@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Sibly Noman | Mechanical Engineering, CFD & Aerospace Portfolio</title>
-  <meta name="description" content="Official portfolio of Sibly Noman, mechanical engineering student at Savonia UAS in Finland. CFD, thermal systems, aerospace research, antenna engineering and projects.">
+  <meta name="description" content="Sibly Noman is a mechanical engineering student at Savonia UAS in Kuopio. Explore his work across hydraulic systems, CFD, aerospace research and sustainable engineering.">
   <meta name="author" content="Sibly Noman"><meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#f4f1e8"><meta name="color-scheme" content="light dark">
   <link rel="canonical" href="https://nomansibly.github.io/">
-  <meta property="og:type" content="profile"><meta property="og:title" content="Sibly Noman | Mechanical Engineering Portfolio"><meta property="og:description" content="Engineering work, research, hardware studies and technical notes.">
+  <meta property="og:type" content="profile"><meta property="og:title" content="Sibly Noman | Mechanical Engineering Portfolio"><meta property="og:description" content="A personal engineering portfolio: hands-on mechanical systems, research, CFD and aerospace work by Sibly Noman.">
   <meta property="og:url" content="https://nomansibly.github.io/">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfilePage","url":"https://nomansibly.github.io/","mainEntity":{"@type":"Person","name":"Sibly Noman","jobTitle":"Mechanical Engineering Student","sameAs":["https://github.com/nomansibly","https://www.linkedin.com/in/nomansibly/"],"knowsAbout":["Mechanical engineering","Computational fluid dynamics","OpenFOAM","Thermal management","Aerospace engineering","Antenna engineering","CubeSat systems","Heat transfer"],"affiliation":{"@type":"CollegeOrUniversity","name":"Savonia University of Applied Sciences"}}}</script>
   <style>
@@ -43,6 +43,55 @@
     .honours{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:18px 0}.honour{padding:13px}.honour strong{font:18px var(--serif);font-weight:500}.honour p{font-size:10px;color:var(--muted);margin:6px 0 0}.credentials{display:flex;flex-wrap:wrap;gap:6px}.credential{font:8px var(--mono);text-decoration:none;padding:6px 8px}
     footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font:9px var(--mono)}.footer-inner{display:flex;justify-content:space-between;gap:10px}.version{user-select:none}
     .admin-message{background:var(--soft);border-left:3px solid var(--accent);padding:15px;font-size:12px;margin:16px 0}
+    
+    .hero-grid{grid-template-columns:1.02fr .98fr;gap:clamp(28px,5vw,64px)}
+    .hero-copy{position:relative;z-index:2}
+    .hero-kicker{display:flex;align-items:center;gap:8px}
+    .hero-kicker-dot{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 14%,transparent)}
+    .hero-copy h1{font-size:clamp(43px,5.3vw,68px);line-height:.98;letter-spacing:-.065em}
+    .hero-copy .intro{font-size:16px;line-height:1.65}
+    .intro-note{max-width:535px;color:var(--muted);font-size:12px;line-height:1.55;border-left:2px solid var(--accent);padding-left:12px;margin:13px 0 0}
+    .hero-actions{margin:20px 0 13px}
+    .microline{display:flex;align-items:center;gap:9px;color:var(--muted);font:9px var(--mono);text-transform:uppercase;letter-spacing:.045em}
+    .microline svg{width:16px;height:16px;color:var(--accent);flex:none}
+    .profile-stage{position:relative;isolation:isolate;min-height:500px;overflow:hidden;background:linear-gradient(135deg,var(--soft),color-mix(in srgb,var(--panel) 74%,var(--green) 26%));border:1px solid var(--line)}
+    .profile-stage:before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(color-mix(in srgb,var(--line) 36%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--line) 36%,transparent) 1px,transparent 1px);background-size:26px 26px;mask-image:linear-gradient(135deg,#000 0%,transparent 72%)}
+    .portrait-halo{position:absolute;z-index:0;width:67%;aspect-ratio:1;border-radius:50%;right:9%;top:9%;background:radial-gradient(circle at 45% 35%,color-mix(in srgb,var(--green) 20%,var(--panel)),color-mix(in srgb,var(--green) 70%,var(--soft)));border:1px solid color-mix(in srgb,var(--green) 35%,var(--line))}
+    .portrait-image{position:absolute;z-index:1;right:8%;bottom:7%;width:67%;height:82%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 15px 16px #18251c26)}
+    .stage-label{position:absolute;z-index:3;right:13px;top:13px;padding:6px 8px;background:var(--paper);border:1px solid var(--line);font:8px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+    .stage-mark{position:absolute;z-index:2;left:15px;top:13px;font:9px var(--mono);color:var(--green);letter-spacing:.07em}
+    .snapshot-card{position:absolute;z-index:4;display:block;width:44%;padding:7px;background:var(--panel);border:1px solid var(--line);box-shadow:0 12px 24px #2028241c;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease}
+    .snapshot-card:hover{color:var(--ink);box-shadow:0 16px 30px #2028242b}
+    .snapshot-cfd{left:3%;top:23%;transform:rotate(-2deg)}
+    .snapshot-cfd:hover{transform:rotate(0) translateY(-4px)}
+    .snapshot-aero{right:2%;bottom:18%;width:40%;transform:rotate(2deg)}
+    .snapshot-aero:hover{transform:rotate(0) translateY(-4px)}
+    .snapshot-kicker{display:flex;justify-content:space-between;gap:8px;padding:2px 2px 7px;font:7px var(--mono);text-transform:uppercase;letter-spacing:.055em;color:var(--green)}
+    .snapshot-card img{display:block;width:100%;height:105px;object-fit:cover;background:var(--soft);border:1px solid var(--line)}
+    .snapshot-aero img{height:72px;object-fit:contain;padding:4px}
+    .snapshot-caption{display:flex;justify-content:space-between;gap:6px;align-items:baseline;padding:7px 2px 1px;font:11px var(--serif)}
+    .snapshot-caption small{font:7px var(--mono);text-transform:uppercase;color:var(--muted)}
+    .profile-caption{position:absolute;z-index:3;left:13px;right:13px;bottom:11px;border-top:1px solid var(--line);padding-top:8px;display:flex;justify-content:space-between;gap:10px;color:var(--muted);font:7px var(--mono);letter-spacing:.055em}
+    .journey{display:grid;grid-template-columns:.78fr 2.22fr;gap:30px;align-items:start;margin-top:38px;padding:23px 0;border-block:1px solid var(--line)}
+    .journey-heading .eyebrow{margin-bottom:8px}
+    .journey-heading h2{font:500 clamp(24px,2.6vw,34px)/1.08 var(--serif);letter-spacing:-.045em;margin:0 0 8px}
+    .journey-heading p{font-size:10px;line-height:1.55;color:var(--muted);max-width:220px;margin:0}
+    .journey-track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .journey-card{display:grid;grid-template-columns:27px 1fr;gap:9px;align-content:start;min-width:0;border-left:1px solid var(--line);padding:2px 0 3px 11px;text-decoration:none;transition:transform .2s ease,border-color .2s ease}
+    .journey-card:hover{transform:translateY(-3px);border-color:var(--accent)}
+    .journey-icon{width:26px;height:26px;display:grid;place-items:center;color:var(--green);background:var(--soft);border:1px solid var(--line)}
+    .journey-icon svg{width:15px;height:15px;display:block}
+    .journey-card time{display:block;font:7px var(--mono);letter-spacing:.04em;color:var(--accent);margin:1px 0 5px}
+    .journey-card strong{display:block;font:500 15px/1.1 var(--serif);margin-bottom:4px}
+    .journey-card small{display:block;font:8px/1.4 var(--mono);color:var(--muted)}
+    .reveal{opacity:1;transform:none}
+    html.motion-ready .reveal{opacity:0;transform:translateY(13px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.65,.3,1)}
+    html.motion-ready .reveal.is-visible{opacity:1;transform:none}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr 1fr}.profile-stage{min-height:440px}.journey{grid-template-columns:1fr;gap:18px}.journey-track{grid-template-columns:repeat(4,minmax(0,1fr))}}
+    @media(max-width:700px){.hero-grid{grid-template-columns:1fr}.profile-stage{max-width:560px;width:100%;min-height:460px;margin:0 auto}.journey-track{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:16px}}
+    @media(max-width:470px){.hero-copy h1{font-size:clamp(39px,11.5vw,50px)}.hero-copy .intro{font-size:15px}.profile-stage{min-height:380px}.snapshot-cfd{top:22%;width:46%}.snapshot-cfd img{height:83px}.snapshot-aero{width:41%;bottom:17%}.snapshot-aero img{height:60px}.profile-caption{font-size:6px}.journey-track{grid-template-columns:1fr}.journey-card{padding-left:8px}.journey-heading p{max-width:none}}
+    @media(prefers-reduced-motion:reduce){html.motion-ready .reveal{opacity:1;transform:none;transition:none}.journey-card,.snapshot-card{transition:none}}
+
     @media(max-width:900px){.head{gap:10px}.quick .external-label{display:none}.section-head{grid-template-columns:110px 1fr}.section-intro{grid-column:2}.hero-grid{gap:25px}}
     @media(max-width:700px){.wrap{width:calc(100% - 30px)}.head{flex-wrap:wrap;padding:7px 0}.wordmark{margin-right:auto}.tabs{order:3;width:100%;justify-content:flex-start}.quick{margin-left:auto}.tab{padding:8px 7px}.topline .status{display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.drawing{max-width:540px}.proof{grid-template-columns:repeat(2,1fr)}.proof-item{border-bottom:1px solid var(--line);padding:12px}.proof-item:first-child{padding-left:12px}.proof-item:nth-child(2){border-right:0}.proof-item:nth-child(3),.proof-item:nth-child(4){border-bottom:0}.project.featured{grid-template-columns:1fr}.featured .media{border-right:0;border-bottom:1px solid var(--line);min-height:190px}.method-grid{grid-template-columns:repeat(2,1fr);row-gap:15px}.method-step:nth-child(2){border-right:0;margin-right:0}.method-step:nth-child(3){border-right:1px solid #829589}.row{grid-template-columns:70px 1fr}.row>a{grid-column:2;text-align:left}.article-list,.hardware-grid{grid-template-columns:1fr 1fr}.footer-inner{flex-wrap:wrap}}
     @media(max-width:470px){.topline{font-size:8px}.head{gap:7px}.quick{gap:4px}.quick a,.print-button{padding:6px;font-size:8px}.icon-button{width:28px;height:28px}.tab{font-size:8px;padding:7px 5px}.hero-grid{gap:22px}.panel{padding:38px 0 55px}h1{font-size:45px}.intro{font-size:15px}.section-head{grid-template-columns:1fr;gap:8px}.section-intro{grid-column:1}.projects,.article-list,.hardware-grid{grid-template-columns:1fr}.project.featured{grid-column:auto}.proof strong{font-size:18px}.proof span{font-size:8px}.method-grid{grid-template-columns:1fr 1fr}.skill{grid-template-columns:100px 1fr;gap:10px}.honours{grid-template-columns:1fr}.footer-inner{flex-direction:column}}
@@ -66,22 +115,43 @@
   <main id="main">
     <section class="panel" id="portfolio" data-panel="portfolio">
       <div class="wrap">
-        <div class="hero hero-grid"><div>
-          <div class="eyebrow">Mechanical engineering student · Savonia UAS</div>
-          <h1>Build the model.<br>Check the assumptions.<br><em>Show the evidence.</em></h1>
-          <p class="intro">I work across thermal systems, computational fluid dynamics and aerospace research. I like a good engineering question, a model you can inspect and results with their limits written beside them.</p>
-          <div class="actions"><a class="button" href="#portfolio-work">EXPLORE PROJECTS ↘</a><a class="button secondary" href="https://github.com/nomansibly">GITHUB PROFILE ↗</a><a class="text-link" href="#about">ABOUT / CV ↘</a></div>
-          <p class="location eyebrow">B.Eng. Mechanical Engineering · 2024—2027 · Kuopio, Finland</p>
-        </div><figure class="drawing"><div class="drawing-top"><span>FIELD NOTE 014</span><span>VENTILATION / SECTION A–A</span></div>
-          <svg viewBox="0 0 520 300" role="img" aria-label="Illustrative room section sketch showing a supply grille, return, sensor points and airflow paths">
-            <defs><pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M18 0H0V18" fill="none" stroke="#c9c8bc" stroke-width=".6"/></pattern><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3 0 6" fill="none" stroke="#e45c37" stroke-width="1.2"/></marker></defs><rect width="520" height="300" fill="url(#grid)"/>
-            <g fill="none" stroke="#303b35" stroke-width="2"><path d="M82 46V235H442V46"/><path d="M82 235H442"/><path d="M82 46H442" stroke-dasharray="5 5"/><path d="M87 66H134M394 66H438" stroke-width="5"/><path d="M101 232V195H149V232M312 232V177H360V232" stroke-width="1.5"/><path d="M265 234V176M255 181l10-12 10 12M247 200h36" stroke-width="1.3"/><circle cx="265" cy="160" r="9"/><path d="M256 173h18l8 27h-34zM260 200l-8 25m22-25 9 25"/></g>
-            <g fill="none" stroke="#e45c37" stroke-width="2" marker-end="url(#arrow)"><path d="M111 70C130 112 170 120 197 100S236 82 251 109"/><path d="M430 218C411 182 385 171 360 188S333 210 313 206"/><path d="M153 70C175 97 201 104 223 95"/></g>
-            <g fill="#375c4c"><circle cx="205" cy="147" r="4"/><circle cx="345" cy="141" r="4"/></g><g fill="#51594f" font-family="monospace" font-size="10"><text x="86" y="34">SUPPLY 19°C</text><text x="389" y="34">RETURN</text><text x="88" y="258">ROOM / 8 × 5 × 3 m</text><text x="88" y="277">● SENSOR POINT</text><text x="295" y="277">— ILLUSTRATIVE AIR PATH</text></g>
-            <g stroke="#7b8176" fill="none" stroke-width="1"><path d="M64 46H54V235H64M70 46V235M67 51l3-5 3 5M67 230l3 5 3-5"/></g><text x="33" y="152" transform="rotate(-90 33 152)" fill="#51594f" font-family="monospace" font-size="10">3.0 m</text>
-          </svg><figcaption class="drawing-foot"><span>LAYOUT SKETCH · NOT SIMULATION OUTPUT</span><span>FIG. 01</span></figcaption>
-        </figure></div>
+        <div class="hero hero-grid">
+        <div class="hero-copy reveal" data-reveal>
+          <div class="eyebrow hero-kicker"><span class="hero-kicker-dot" aria-hidden="true"></span>SIBLY NOMAN · MECHANICAL ENGINEERING STUDENT</div>
+          <h1>From aeronautics<br>to hydraulic rigs,<br><em>I follow the system.</em></h1>
+          <p class="intro">I’m studying Mechanical Engineering at Savonia UAS in Kuopio after earlier aeronautics studies at Universiti Teknologi Malaysia. My projects move between real mechanisms and the analysis behind them: a team-built hydraulic test bench, micro-TBM research, airflow modelling and CubeSat antennas.</p>
+          <p class="intro-note">I also worked in ESG analysis at MJH Infra Oy, where I saw how engineering performance and environmental impact belong in the same conversation.</p>
+          <div class="actions hero-actions"><a class="button" href="#portfolio-work">SEE WHAT I’VE BUILT ↘</a><a class="button secondary" href="#about">MY STORY + CV ↘</a></div>
+          <div class="microline"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16M6 15l3-5 3 3 5-7 2 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="6" r="1.7" fill="currentColor"/></svg><span>B.Eng. Mechanical Engineering · 2024—2027 · Kuopio, Finland</span></div>
+        </div>
+        <div class="profile-stage reveal" data-reveal aria-label="Portrait of Sibly Noman with selected engineering work">
+          <div class="portrait-halo" aria-hidden="true"></div>
+          <span class="stage-mark">SN / ENGINEERING NOTES</span>
+          <span class="stage-label">FIELDWORK → ANALYSIS</span>
+          <img class="portrait-image" src="/assets/sibly-noman-portrait.svg" alt="Portrait of Sibly Noman" fetchpriority="high">
+          <a class="snapshot-card snapshot-cfd" href="#portfolio?project=indoor-air-lab" aria-label="Open the Indoor Air Lab project">
+            <span class="snapshot-kicker"><span>01 / AIRFLOW</span><span>CFD</span></span>
+            <img src="https://raw.githubusercontent.com/nomansibly/indooraircfd/main/results/rans/cross_room.png" alt="Temperature contours from Sibly's cross-room ventilation case">
+            <span class="snapshot-caption"><span>Indoor Air Lab</span><small>OpenFOAM</small></span>
+          </a>
+          <a class="snapshot-card snapshot-aero" href="#portfolio?project=a350-airworthiness" aria-label="Open the A350 airworthiness project">
+            <span class="snapshot-kicker"><span>02 / AIRCRAFT</span><span>SCHEMATIC</span></span>
+            <img src="https://raw.githubusercontent.com/nomansibly/a350-camo-auditor/main/a350-900-schematic.svg" alt="Original A350-900 schematic from Sibly's airworthiness project">
+            <span class="snapshot-caption"><span>A350 study</span><small>Systems</small></span>
+          </a>
+          <div class="profile-caption"><span>KUOPIO, FINLAND</span><span>MECHANISMS · MODELS · IMPACT</span></div>
+        </div>
+      </div>
         <div class="proof"><div class="proof-item"><strong>3 IEEE papers</strong><span>Published research · 2022</span></div><div class="proof-item"><strong>2nd place</strong><span>Finnish PM Championship · 2026</span></div><div class="proof-item"><strong>IPMA Level D</strong><span>Project management</span></div><div class="proof-item"><strong>Top 5 global</strong><span>IMechE Sear Innovation Challenge</span></div></div>
+        <div class="journey reveal" data-reveal aria-label="Sibly Noman's engineering path">
+          <div class="journey-heading"><div class="eyebrow">HOW I GOT HERE</div><h2>Different settings.<br>One systems view.</h2><p>From aerospace studies to mechanical design, research and sustainability work.</p></div>
+          <div class="journey-track">
+            <a class="journey-card" href="#about"><span class="journey-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 13 18-4-7 4-3 7-2-1 1-6-7 1z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span><span><time>2022—2024</time><strong>Aeronautics</strong><small>Universiti Teknologi Malaysia</small></span></a>
+            <a class="journey-card" href="#about"><span class="journey-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10 2 2M19 5l-2 2M7 17l-2 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><time>2024—2027</time><strong>Mechanical Engineering</strong><small>Savonia UAS · Kuopio</small></span></a>
+            <a class="journey-card" href="#about"><span class="journey-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 5C11 5 5 8 5 14c0 3 2 5 5 5 7 0 9-8 9-14Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 21c3-6 7-9 13-12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><time>2024—2025</time><strong>ESG Analyst</strong><small>MJH Infra Oy · Finland</small></span></a>
+            <a class="journey-card" href="#about"><span class="journey-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="17" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m8 7 7 0M7 9l9 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span><span><time>RESEARCH TEAMS</time><strong>TBM + CubeSat</strong><small>Bored Tunnelers · DhumketuX</small></span></a>
+          </div>
+        </div>
         <div id="portfolio-work" style="padding-top:58px"><div class="section-head"><div class="index">01 / PROJECTS</div><h2>Selected engineering work</h2><p class="section-intro">Runnable demos, technical records and lessons from real project work.</p></div>
           <div class="filters" role="group" aria-label="Filter projects"><button class="filter" data-filter="all" aria-pressed="true">All</button><button class="filter" data-filter="thermal" aria-pressed="false">Thermal / CFD</button><button class="filter" data-filter="aerospace" aria-pressed="false">Aerospace / RF</button><button class="filter" data-filter="systems" aria-pressed="false">Systems / teams</button></div>
           <p class="count" id="project-count" aria-live="polite">Showing 6 projects</p>
@@ -164,7 +234,7 @@
       </div>
     </section>
   </main>
-  <footer><div class="wrap footer-inner"><span><a href="/about-sibly-noman.html">About Sibly Noman</a> · <a href="/#research">Research</a> · <a href="/#portfolio">Projects</a></span><span>© <span id="year">2026</span> Sibly Noman · Engineering portfolio</span><span>Site version <span class="version" id="version" title="Portfolio version">03.0</span></span></div></footer>
+  <footer><div class="wrap footer-inner"><span><a href="/about-sibly-noman.html">About Sibly Noman</a> · <a href="/#research">Research</a> · <a href="/#portfolio">Projects</a></span><span>© <span id="year">2026</span> Sibly Noman · Engineering portfolio</span><span>Site version <span class="version" id="version" title="Portfolio version">04.0</span></span></div></footer>
   <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><span class="index" id="dialog-kind">PROJECT NOTE</span><button class="dialog-close" id="dialog-close" type="button">CLOSE ×</button></div><div class="dialog-body" id="dialog-body"></div></dialog>
   <script src="/articles.js"></script><script src="/cv-download.js"></script>
   <script>
@@ -188,6 +258,11 @@
       theme.addEventListener("click",function(){document.body.classList.toggle("dark");try{localStorage.setItem("sn-theme",document.body.classList.contains("dark")?"dark":"light")}catch(e){}});
       document.querySelectorAll(".filter[data-filter]").forEach(function(button){button.addEventListener("click",function(){var parent=button.closest("[role=group]");parent.querySelectorAll(".filter").forEach(function(b){b.setAttribute("aria-pressed",String(b===button))});var filter=button.dataset.filter;if(button.classList.contains("article-filter")){var shown=0;document.querySelectorAll(".article-card").forEach(function(card){var visible=filter==="all"||card.dataset.kind===filter;card.hidden=!visible;if(visible)shown++});return}var shown=0;document.querySelectorAll(".project").forEach(function(card){var cats=(card.dataset.category||"").split(" ");var visible=filter==="all"||cats.indexOf(filter)>=0;card.hidden=!visible;if(visible)shown++});document.getElementById("project-count").textContent="Showing "+shown+" project"+(shown===1?"":"s")})});
       document.getElementById("year").textContent=String(new Date().getFullYear());
+      document.documentElement.classList.add("motion-ready");
+      if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
+        var revealObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add("is-visible");revealObserver.unobserve(entry.target)}})},{threshold:.12});
+        document.querySelectorAll("[data-reveal]").forEach(function(item){revealObserver.observe(item)});
+      }else{document.querySelectorAll("[data-reveal]").forEach(function(item){item.classList.add("is-visible")})}
       renderRoute();
     })();
   </script>

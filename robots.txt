@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://nomansibly.github.io/siblynoman2003-beep.github.io/sitemap.xml
+Sitemap: https://nomansibly.github.io/sitemap.xml

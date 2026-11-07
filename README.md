@@ -7,17 +7,15 @@ A hand-built, responsive portfolio for mechanical engineering, CFD, thermal syst
 ## Website
 
 - Five bookmarkable hash tabs: portfolio, hardware & CAD, research & papers, blog & reviews, and about & CV.
-- Project details open as shareable deep links such as `#portfolio?project=indoor-air-lab`.
-- Filterable project cards; selected source plots and project schematics; explicit evidence and model limits.
-- Twenty blog and aircraft-review outlines, labeled as outlines rather than published articles.
-- Light/dark theme, print-to-PDF layout, responsive navigation and reduced-motion support.
+- Project notes and all 20 complete technical articles open through shareable deep links.
+- Article references link to standards, primary literature and official manufacturer or regulator information where available.
+- Filterable project and article cards; selected source plots and project schematics; explicit model limits.
+- Downloadable CV PDF, light/dark theme, responsive navigation and reduced-motion support.
 - Plain HTML, CSS and JavaScript; no build step, tracking, external font service or runtime framework.
 
-## Content updates
+## Updating content
 
-Use Ctrl+Shift+A on the site to open the unindexed browser editor. Drafts and previews stay in the browser until committed. The editor opens GitHub's file editor for publishing; GitHub account sign-in and repository write permissions control the commit. GitHub Pages then publishes the committed change.
-
-The editor is a static local-draft tool, not a server-side password CMS. Do not place passwords or access tokens in the website. A direct-publish CMS with Markdown, KaTeX rendering and secure media uploads requires an authenticated backend.
+There is no public admin panel or editor route. Update the source files in this repository through GitHub. The portfolio is hosted on GitHub Pages, so it cannot provide a secure password-protected CMS by itself. A future CMS would need an authenticated server-side service.
 
 ## Run locally
 

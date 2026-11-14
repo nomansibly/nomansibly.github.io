@@ -347,6 +347,19 @@ html{scroll-padding-top:148px}
 .quick{flex-wrap:wrap}
 .quick a[aria-label="GitHub profile"],.quick a[aria-label="LinkedIn profile"]{gap:5px}
 
+
+/* Open, cross-disciplinary positioning rather than a deadline-driven job notice */
+.hero-opportunity{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:5px 20px;max-width:610px;padding:15px 17px;border:1px solid var(--line);border-left:4px solid var(--green);background:var(--panel);margin:16px 0 10px}
+.hero-opportunity-label{grid-column:1/-1;display:inline-flex;align-items:center;gap:8px;font:800 10px/1.4 var(--mono);color:var(--green);letter-spacing:.08em}
+.hero-opportunity-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);flex:none}
+.hero-opportunity p{font:500 13px/1.55 system-ui,sans-serif;color:var(--ink);margin:0;max-width:440px}
+.hero-opportunity a{display:inline-flex;white-space:nowrap;align-items:center;justify-content:center;gap:9px;min-height:38px;padding:10px 13px;background:var(--green);color:var(--panel);font:800 10px/1.2 system-ui,sans-serif;letter-spacing:.03em;text-decoration:none}
+.hero-opportunity a:hover,.hero-opportunity a:focus-visible{background:var(--accent);color:#fff}
+.hero-expertise{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 18px}
+.hero-expertise span{display:inline-flex;align-items:center;border:1px solid var(--line);background:var(--soft);color:var(--ink);padding:6px 8px;font:700 9px/1.3 system-ui,sans-serif;letter-spacing:.03em}
+@media(max-width:900px){.hero-opportunity{grid-template-columns:1fr;gap:9px}.hero-opportunity a{justify-self:start}}
+@media(max-width:470px){.hero-opportunity{padding:13px}.hero-opportunity p{font-size:13px}.hero-expertise span{font-size:9px}}
+
 </style>
 </head>
 <body>
@@ -370,9 +383,9 @@ html{scroll-padding-top:148px}
         <div class="hero-copy reveal" data-reveal>
           <div class="eyebrow hero-kicker"><span class="hero-kicker-dot" aria-hidden="true"></span>SIBLY NOMAN · MECHANICAL ENGINEERING STUDENT</div>
           <h1>Engineering systems.<br>From hydraulic rigs<br><em>to CFD &amp; data.</em></h1>
-          <p class="intro">I’m studying Mechanical Engineering at Savonia UAS in Kuopio after earlier aeronautics studies at Universiti Teknologi Malaysia. My work brings together hands-on hydraulic test-bench commissioning, thermal and airflow simulation, Python engineering tools and aerospace research. I enjoy connecting mechanical design, physical testing, simulation and data analysis to solve practical engineering problems.</p>
-          <p class="resume-quick"><a class="button secondary" id="download-cv-home" href="/assets/Sibly-Noman-CV.pdf" download>DOWNLOAD FULL ENGINEERING RESUME (PDF) ↓</a></p><p class="availability">Seeking 2027 thesis collaborations, internships and graduate roles · Summer 2027 dates to be confirmed. <a href="mailto:sibly.noman2003@gmail.com">Email me ↗</a></p>
-          <p class="intro-note">I also worked in ESG analysis at MJH Infra Oy, where I saw how engineering performance and environmental impact belong in the same conversation.</p>
+          <p class="intro">Some engineering challenges start in a workshop. Others begin with a simulation, a data model or a fresh perspective. I explore all of them through hydraulic test systems, CFD, aerospace research and Python tools—bringing experience in multidisciplinary teamwork and sustainability analysis.</p>
+          <p class="resume-quick"><a class="button secondary" id="download-cv-home" href="/assets/Sibly-Noman-CV.pdf" download>DOWNLOAD FULL ENGINEERING RESUME (PDF) ↓</a></p><div class="hero-opportunity" aria-label="Collaboration and opportunities"><span class="hero-opportunity-label"><span class="hero-opportunity-dot" aria-hidden="true"></span> OPEN TO NEW IDEAS</span><p>Engineering projects, research, meaningful collaborations and professional opportunities.</p><a href="mailto:sibly.noman2003@gmail.com">LET’S CONNECT <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-expertise" aria-label="Engineering interests"><span>MECHANICAL SYSTEMS</span><span>CFD &amp; THERMAL</span><span>AEROSPACE</span><span>PYTHON &amp; DATA</span><span>SUSTAINABILITY</span></div>
           <div class="actions hero-actions"><a class="button" href="#portfolio-work">SEE WHAT I’VE BUILT ↘</a><a class="button secondary" href="#about">MY STORY + CV ↘</a></div>
           <div class="microline"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16M6 15l3-5 3 3 5-7 2 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="6" r="1.7" fill="currentColor"/></svg><span>B.Eng. Mechanical Engineering · 2024—2027 · Kuopio, Finland</span></div>
         </div>
@@ -523,11 +536,11 @@ html{scroll-padding-top:148px}
     <div class="about-grid"><div class="about-copy"><p class="lead">I’m Sibly Noman, a mechanical engineering student in Kuopio, Finland.</p><p>My interests span mechanical systems, thermal management, CFD, satellite communications, antenna development and low-power IoT. I enjoy engineering work that defines a clear problem, explores technical trade-offs and turns results into useful decisions.</p><p>I have contributed to student engineering teams, led research activities and worked on ESG reporting and carbon-footprint analysis. Alongside technical work, I bring project planning and cross-disciplinary coordination.</p><p><a class="button" id="download-cv-about" href="/assets/Sibly-Noman-CV.pdf" download>DOWNLOAD CV PDF ↓</a></p></div>
           <div class="skill-groups"><div class="skill"><h3>SIMULATION</h3><p>OpenFOAM · CFD · Heat transfer · HVAC · Numerical modelling</p></div><div class="skill"><h3>DESIGN</h3><p>SolidWorks · 3D modelling · Machinability · Threading · Mechanical systems</p></div><div class="skill"><h3>AEROSPACE + RF</h3><p>Satellite communications · CubeSat subsystems · RF engineering · Antenna research</p></div><div class="skill"><h3>COMPUTE + DATA</h3><p>Python · SQLite · Streamlit · Plotly · GitHub Actions · Technical writing</p></div><div class="skill"><h3>PROJECT WORK</h3><p>Research planning · Teamwork · Project management · Engineering communication</p></div></div></div>
     <section id="contact" class="contact-panel" aria-labelledby="contact-heading">
-      <div class="contact-overline">2027 / COLLABORATION &amp; OPPORTUNITIES</div>
+      <div class="contact-overline">ENGINEERING / COLLABORATION &amp; OPPORTUNITIES</div>
       <div class="contact-layout">
         <div class="contact-introduction">
           <h2 id="contact-heading">Let's talk engineering.</h2>
-          <p>Open to thesis collaborations, engineering internships and graduate opportunities in 2027, particularly mechanical test systems, thermal/CFD and Python engineering tools. Summer availability dates to be confirmed.</p>
+          <p>Interested in engineering challenges across mechanical design, physical systems, aerospace, simulation, research, data and sustainability. I welcome conversations about collaborations, thesis projects, internships and professional opportunities.</p>
         </div>
         <div class="contact-side">
           <a class="contact-email" href="mailto:sibly.noman2003@gmail.com">sibly.noman2003@gmail.com</a>

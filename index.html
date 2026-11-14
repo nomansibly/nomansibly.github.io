@@ -333,6 +333,14 @@ html{scroll-padding-top:148px}
   .skill{grid-template-columns:108px 1fr}
 }
 
+
+/* Consistent edge alignment for standalone editorial section titles */
+.journey,.recognition{grid-template-columns:minmax(0,1fr);gap:18px}
+.journey-heading,.recognition-intro{max-width:720px;text-align:left}
+.journey-heading h2,.recognition-intro h2{max-width:720px;font-size:clamp(27px,3vw,38px)}
+.journey-heading p,.recognition-intro p{max-width:600px;font-size:13px;line-height:1.6}
+.journey-track,.recognition-content{min-width:0}
+
 </style>
 </head>
 <body>

@@ -242,7 +242,7 @@ function onPick(event) {
 }
 function showFallback(error) {
   console.warn("Hydraulic exploded model is unavailable:",error);
-  if(loading)loading.hidden=true;
+  if(loading){loading.hidden=true;loading.style.display="none"}
   if(fallback){fallback.hidden=false;fallback.style.display="flex"}
 }
 function main() {
@@ -289,6 +289,7 @@ function main() {
       turntableButton.textContent=turntable?"■ STOP ROTATION":"▶ TURNTABLE";
       ensureLoop();
     });
+    if(reduced){turntableButton.disabled=true;turntableButton.title="Animation disabled by reduced-motion preference"}
     renderer.domElement.addEventListener("pointerdown",(e)=>{pointerStart={x:e.clientX,y:e.clientY}});
     renderer.domElement.addEventListener("pointerup",(e)=>{
       if(!pointerStart)return;

@@ -1104,6 +1104,75 @@ body.dark .certificate-card .cert-link{color:var(--green)}
         else window.addEventListener("resize",function(){select(active)});
         select(0);
       })();
+
+      (function(){
+        var root=document.querySelector("[data-inspect-lab]");if(!root)return;
+        var scene=root.querySelector("[data-inspect-scene]");
+        var front=root.querySelector("[data-inspect-front]"),back=root.querySelector("[data-inspect-back]");
+        var frontTitle=root.querySelector("[data-inspect-front-title]"),backTitle=root.querySelector("[data-inspect-back-title]");
+        var flip=root.querySelector("[data-inspect-flip]"),split=root.querySelector("[data-inspect-split]");
+        var status=root.querySelector("[data-inspect-status]"),link=root.querySelector("[data-inspect-link]");
+        var systems={
+          hydraulic:{a:"/assets/hydraulic-cad-hd.webp",b:"/assets/hydraulic-prototype-hd.webp",altA:"Hydraulic test bench CAD assembly",altB:"Finished Savonia hydraulic test bench",titleA:"3D ASSEMBLY",titleB:"REAL BUILD",href:"#portfolio?project=savonia-hydraulic-bench"},
+          tbm:{a:"/assets/tbm-cad-hd.webp",b:"/assets/tbm-field-hd.webp",altA:"Bored Tunnelers micro-TBM CAD render",altB:"Built Bored Tunnelers micro-TBM photographed outdoors",titleA:"CAD DESIGN",titleB:"FIELD PROTOTYPE",href:"#portfolio?project=micro-tbm"},
+          a350:{a:"/assets/a350-cad-hd.webp",b:"/assets/a350-schematic.svg",altA:"A350-900 CAD assembly visualization",altB:"A350 aircraft schematic",titleA:"CAD VIEW",titleB:"AIRCRAFT SCHEMATIC",href:"#portfolio?project=a350-airworthiness"}
+        };
+        var flipped=false,compared=false,start=null;
+        function update(){
+          scene.style.setProperty("--flip",flipped?"180deg":"0deg");
+          scene.classList.toggle("is-split",compared);
+          flip.disabled=compared;
+          split.setAttribute("aria-pressed",String(compared));
+          status.textContent=compared?"Showing both engineering views":"Showing "+(flipped?backTitle.textContent:frontTitle.textContent);
+        }
+        root.querySelectorAll("[data-inspect-system]").forEach(function(button){
+          button.addEventListener("click",function(){
+            var p=systems[button.getAttribute("data-inspect-system")];if(!p)return;
+            front.src=p.a;front.alt=p.altA;back.src=p.b;back.alt=p.altB;
+            frontTitle.textContent=p.titleA;backTitle.textContent=p.titleB;link.href=p.href;
+            flipped=false;compared=false;
+            root.querySelectorAll("[data-inspect-system]").forEach(function(b){b.setAttribute("aria-pressed",String(b===button))});
+            scene.style.setProperty("--ix","0deg");scene.style.setProperty("--iy","0deg");update();
+          });
+        });
+        flip.addEventListener("click",function(){if(!compared){flipped=!flipped;update()}});
+        split.addEventListener("click",function(){compared=!compared;update()});
+        scene.addEventListener("pointerdown",function(e){if(e.button===0)start={x:e.clientX,y:e.clientY,id:e.pointerId}});
+        scene.addEventListener("pointerup",function(e){
+          if(!start||e.pointerId!==start.id)return;
+          var dx=e.clientX-start.x,dy=e.clientY-start.y;start=null;
+          if(!compared&&Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.15){flipped=!flipped;update()}
+        });
+        scene.addEventListener("pointercancel",function(){start=null});
+        if(window.matchMedia&&window.matchMedia("(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference)").matches){
+          scene.addEventListener("pointermove",function(e){
+            var r=scene.getBoundingClientRect();if(!r.width||!r.height)return;
+            var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+            scene.style.setProperty("--ix",(-y*4).toFixed(2)+"deg");
+            scene.style.setProperty("--iy",(x*5).toFixed(2)+"deg");
+          });
+          scene.addEventListener("pointerleave",function(){scene.style.setProperty("--ix","0deg");scene.style.setProperty("--iy","0deg")});
+        }
+        update();
+      })();
+      (function(){
+        if(!window.matchMedia||!window.matchMedia("(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference)").matches)return;
+        var cards=[].slice.call(document.querySelectorAll(".project"));
+        var portrait=document.querySelector(".portrait-frame.smart-portrait");if(portrait)cards.push(portrait);
+        cards.forEach(function(card){
+          card.addEventListener("pointermove",function(e){
+            var r=card.getBoundingClientRect();if(!r.width||!r.height)return;
+            var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+            card.style.setProperty("--rx",(-y*3.2).toFixed(2)+"deg");
+            card.style.setProperty("--ry",(x*3.2).toFixed(2)+"deg");
+            card.classList.add("depth-tilting");
+          });
+          card.addEventListener("pointerleave",function(){
+            card.classList.remove("depth-tilting");
+            card.style.removeProperty("--rx");card.style.removeProperty("--ry");
+          });
+        });
+      })();
       renderRoute();
     })();
   </script>

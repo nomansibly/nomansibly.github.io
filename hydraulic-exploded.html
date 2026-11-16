@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b101b">
+  <meta name="description" content="Explore a 3D schematic of the Savonia hydraulic rotational teaching test bench: explode the assembly, orbit the model and inspect its components.">
+  <title>Hydraulic Test Bench | 3D Assembly Explorer — Sibly Noman</title>
+  <link rel="canonical" href="https://nomansibly.github.io/hydraulic-exploded.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <script>if(new URLSearchParams(location.search).has("embed"))document.documentElement.classList.add("embedded")</script>
+  <script type="importmap">
+  {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/"}}
+  </script>
+  <style>
+  :root{color-scheme:dark;--bg:#0b101b;--panel:#111b2b;--panel2:#0d1624;--line:#35465b;--text:#ecf4ff;--muted:#a9b8cb;--cyan:#6be4e0;--pink:#ff6587;--head:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--body:"Manrope",system-ui,sans-serif}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);background-image:radial-gradient(circle at 75% 6%,#2f5a6640,transparent 33%);margin:0;color:var(--text);font:500 14px/1.65 var(--body)}
+  button,input{font:inherit}
+  a{color:inherit}
+  button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+  .wrap{width:min(1290px,calc(100% - 48px));margin-inline:auto}
+  .topnav{border-bottom:1px solid var(--line);background:#0b1321d8}
+  .topnav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:65px;gap:12px}
+  .brand{font:800 20px/1 var(--head);letter-spacing:.045em;text-decoration:none}.brand b{color:var(--pink)}
+  .back{border:1px solid var(--line);padding:8px 13px;border-radius:22px;font-size:11px;font-weight:800;text-decoration:none}.back:hover{border-color:var(--cyan);color:var(--cyan)}
+  .intro{padding:34px 0 22px;display:flex;align-items:end;justify-content:space-between;gap:20px}
+  .eyebrow{font:800 10px/1.3 var(--body);letter-spacing:.17em;color:var(--cyan);margin-bottom:12px}
+  h1{font:900 clamp(47px,6.4vw,84px)/.9 var(--head);letter-spacing:.01em;margin:0;text-transform:uppercase}
+  h1 em{font-style:normal;color:var(--pink)}
+  .subline{font-size:13px;color:var(--muted);max-width:390px;margin:0 0 4px}
+  .sim-badge{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;padding:7px 11px;border-radius:22px;border:1px solid #ff789d66;color:#ffc0d0;font:800 10px/1.4 var(--body);letter-spacing:.06em}
+  .sim-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--pink)}
+  .desk{display:grid;grid-template-columns:minmax(0,1.72fr) minmax(260px,.78fr);gap:14px}
+  .viewer-shell{position:relative;background:#0b1725;border:1px solid var(--line);border-radius:14px;overflow:hidden;min-width:0}
+  .viewer{position:relative;height:535px;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 36%,#24485c,transparent 68%),linear-gradient(#0d1b2b,#0b1420);touch-action:pan-y;cursor:grab}
+  .viewer:active{cursor:grabbing}
+  .viewer::before{content:"";position:absolute;pointer-events:none;inset:0;background-image:linear-gradient(#acc0d10a 1px,transparent 1px),linear-gradient(90deg,#acc0d10a 1px,transparent 1px);background-size:47px 47px}
+  .viewer canvas{display:block;position:relative;z-index:1;width:100%;height:100%;outline:none}
+  .viewer-loading,.viewer-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;gap:15px;z-index:2;background:#0b1724;color:var(--muted);text-align:center}
+  .viewer-loading{background:transparent}
+  .viewer-fallback img{display:block;max-height:260px;max-width:90%;object-fit:contain;border-radius:8px}
+  .viewer-fallback a{color:var(--cyan)}
+  .scene-overlay{position:absolute;z-index:3;top:18px;left:18px;pointer-events:none;display:flex;flex-direction:column;gap:5px}
+  .scene-overlay span:first-child{color:var(--cyan);font-size:10px;font-weight:800;letter-spacing:.12em}
+  .scene-overlay span:last-child{color:#b0c7db;font-size:10px}
+  .viewer-corner{position:absolute;z-index:3;right:18px;top:18px;pointer-events:none;border:1px solid #6a8b9c50;border-radius:18px;padding:6px 11px;font:800 10px/1.2 var(--body);color:#c7d6e4}
+  .viewer-help{position:absolute;z-index:3;pointer-events:none;left:50%;bottom:13px;transform:translateX(-50%);font:800 10px/1.3 var(--body);letter-spacing:.09em;color:#a9c4d4;white-space:nowrap;text-shadow:0 1px 4px #000}
+  .slider-panel{padding:19px 23px 17px;background:#111e30;border-top:1px solid var(--line)}
+  .range-row{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:10px}
+  .range-row label{font-size:12px;font-weight:800;letter-spacing:.08em}
+  output{font:900 27px/.9 var(--head);color:var(--cyan)}
+  .range-input{display:block;width:100%;accent-color:var(--pink);cursor:pointer;height:27px;margin:0}
+  .range-scale{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.07em;color:var(--muted);font-weight:800}
+  .control-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .control-row button{background:#1b2e43;color:var(--text);border:1px solid #4b627a;border-radius:22px;min-height:38px;padding:9px 14px;font:800 10px/1.3 var(--body);cursor:pointer}
+  .control-row button:hover,.control-row button[aria-pressed=true]{border-color:var(--cyan);color:var(--cyan)}
+  .control-row button:disabled{opacity:.45;cursor:not-allowed}
+  .control-row p{font-size:10px;color:var(--muted);margin:0}
+  .side{display:flex;flex-direction:column;gap:14px;min-width:0}
+  .parts-panel,.detail-panel{border:1px solid var(--line);border-radius:14px;padding:19px 17px;background:var(--panel)}
+  .panel-kicker{display:block;color:var(--cyan);font:800 10px/1.35 var(--body);letter-spacing:.14em;margin-bottom:7px}
+  .parts-panel h2,.detail-panel h2{font:800 30px/1 var(--head);margin:0 0 13px}
+  .parts{display:grid;gap:7px}
+  .part{display:flex;align-items:center;gap:10px;width:100%;text-align:left;min-height:44px;padding:9px 10px;border:1px solid #36485d;border-radius:8px;background:#152338;color:#e5f1ff;cursor:pointer}
+  .part:hover{border-color:var(--cyan)}
+  .part[aria-pressed=true]{border-color:var(--cyan);background:#193a4a;box-shadow:inset 3px 0 0 var(--cyan)}
+  .part .num{font:800 10px var(--body);color:var(--pink);min-width:19px}
+  .part .partname{font-size:11px;font-weight:800;letter-spacing:.01em}
+  .part .chev{margin-left:auto;color:var(--cyan);font-size:12px}
+  .detail-panel{flex:1;min-height:155px;background:linear-gradient(150deg,#132336,#101927)}
+  .detail-panel h2{font-size:27px;margin-bottom:9px}
+  .detail-panel p{color:var(--muted);font-size:12px;line-height:1.7;margin:0}
+  .detail-panel .selection-note{display:block;margin-top:12px;color:var(--cyan);font-size:10px;font-weight:800;letter-spacing:.04em}
+  .sources{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:21px}
+  .source{margin:0;background:var(--panel2);overflow:hidden;border:1px solid var(--line);border-radius:10px;display:grid;grid-template-columns:180px 1fr;min-height:140px}
+  .source img{height:100%;width:100%;object-fit:contain;background:#15202b;padding:10px}
+  .source figcaption{padding:15px;display:flex;flex-direction:column;justify-content:center;gap:4px}
+  .source figcaption strong{font:800 23px/1 var(--head);letter-spacing:.02em}
+  .source figcaption span{font-size:11px;color:var(--muted)}
+  .caveat{margin:16px 0 26px;padding:11px 15px;border:1px solid #54718666;border-radius:8px;color:#b5c9d9;font-size:11px;line-height:1.6}
+  .bottom{padding:18px 0 38px;display:flex;justify-content:space-between;gap:12px;align-items:center;border-top:1px solid var(--line)}
+  .bottom a{color:var(--cyan);font-size:12px;font-weight:800;text-decoration:none}
+  .bottom a:hover{text-decoration:underline}
+  .bottom span{font-size:10px;color:var(--muted)}
+  .embedded .topnav,.embedded .intro,.embedded .sources,.embedded .caveat,.embedded .bottom{display:none}
+  .embedded .wrap{width:100%;max-width:none}
+  .embedded .desk{grid-template-columns:minmax(0,1.7fr) minmax(260px,.75fr);gap:0}
+  .embedded .viewer-shell,.embedded .parts-panel,.embedded .detail-panel{border-radius:0}
+  .embedded .viewer{height:465px}
+  .embedded .side{gap:0}
+  .embedded .parts-panel{border-left:0}
+  .embedded .detail-panel{border-left:0;border-top:0}
+  @media(max-width:1000px){.viewer{height:470px}.desk{grid-template-columns:minmax(0,1.3fr) minmax(250px,.7fr)}.embedded .viewer{height:420px}}
+  @media(max-width:730px){
+    .wrap{width:min(100% - 24px,1290px)}
+    .intro{align-items:start;flex-direction:column;padding-top:25px;gap:9px}
+    .desk,.embedded .desk{grid-template-columns:1fr;gap:12px}
+    .viewer,.embedded .viewer{height:385px}
+    .side{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .embedded .side{display:grid;grid-template-columns:1fr 1fr;gap:0}
+    .embedded .parts-panel,.embedded .detail-panel{border:1px solid var(--line)}
+    .parts-panel h2,.detail-panel h2{font-size:25px}
+    .part{min-height:39px}
+    .source{grid-template-columns:130px 1fr}
+  }
+  @media(max-width:520px){
+    .wrap{width:calc(100% - 20px)}
+    h1{font-size:52px}
+    .viewer,.embedded .viewer{height:315px}
+    .slider-panel{padding:15px}
+    .side,.embedded .side{grid-template-columns:1fr}
+    .parts{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .part{padding:8px;gap:5px}
+    .partname{line-height:1.35}
+    .detail-panel{min-height:130px}
+    .sources{grid-template-columns:1fr}
+    .source{grid-template-columns:125px 1fr}
+    .viewer-help{font-size:8px}
+  }
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <nav class="topnav"><div class="wrap"><a class="brand" href="/#portfolio">SN <b>/</b> ENGINEERING</a><a class="back" href="/#portfolio?project=savonia-hydraulic-bench">← BACK TO PROJECT</a></div></nav>
+  <main class="wrap">
+    <header class="intro">
+      <div><div class="eyebrow">01 / HARDWARE · SAVONIA UNIVERSITY OF APPLIED SCIENCES</div><h1>INSIDE THE <em>MACHINE.</em></h1></div>
+      <div><span class="sim-badge">ILLUSTRATIVE 3D ASSEMBLY</span><p class="subline">Explore the hydraulic test bench's component layout. Drag to orbit, select a part, then explode the assembly.</p></div>
+    </header>
+    <div class="desk">
+      <section class="viewer-shell" aria-label="Interactive 3D exploded-view viewer">
+        <div class="viewer" id="viewer">
+          <div class="viewer-loading" id="loading">Loading interactive model…</div>
+          <div class="viewer-fallback" id="fallback" hidden><strong>3D view unavailable</strong><img src="/assets/hydraulic-cad-hd.webp" alt="CAD illustration of hydraulic test bench"><a href="/assets/hydraulic-cad-hd.webp">Open the CAD illustration</a></div>
+          <div class="scene-overlay"><span>ASSEMBLY / EXPLORER</span><span>SCHEMATIC · NOT TO SCALE</span></div>
+          <span class="viewer-corner">3D / LIVE</span><span class="viewer-help">DRAG TO ORBIT · SCROLL TO ZOOM</span>
+        </div>
+        <div class="slider-panel">
+          <div class="range-row"><label for="explode-range">EXPLODE ASSEMBLY</label><output id="explode-value" for="explode-range">0%</output></div>
+          <input class="range-input" id="explode-range" type="range" min="0" max="100" step="1" value="0" aria-label="Explode assembly from 0 percent assembled to 100 percent separated">
+          <div class="range-scale"><span>0% / ASSEMBLED</span><span>100% / EXPLODED</span></div>
+          <div class="control-row"><div><button id="reset-view" type="button">↺ RESET VIEW</button> <button id="turntable" type="button" aria-pressed="false">▶ TURNTABLE</button></div><p>SELECT A COMPONENT TO INSPECT</p></div>
+        </div>
+      </section>
+      <aside class="side">
+        <section class="parts-panel"><span class="panel-kicker">COMPONENT TREE</span><h2>EXPLORE THE PARTS.</h2>
+          <div class="parts" id="parts">
+            <button class="part" type="button" data-part="guard" aria-pressed="false"><span class="num">01</span><span class="partname">Transparent safety guard</span><span class="chev">↗</span></button>
+            <button class="part" type="button" data-part="gear" aria-pressed="false"><span class="num">02</span><span class="partname">Upper gear transmission</span><span class="chev">↗</span></button>
+            <button class="part" type="button" data-part="shaft" aria-pressed="false"><span class="num">03</span><span class="partname">Vertical shaft & bearing</span><span class="chev">↗</span></button>
+            <button class="part" type="button" data-part="drive" aria-pressed="false"><span class="num">04</span><span class="partname">Lower drive & flywheel</span><span class="chev">↗</span></button>
+            <button class="part" type="button" data-part="frame" aria-pressed="false"><span class="num">05</span><span class="partname">Welded support frame</span><span class="chev">↗</span></button>
+            <button class="part" type="button" data-part="sensor" aria-pressed="false"><span class="num">06</span><span class="partname">Sensors & controller</span><span class="chev">↗</span></button>
+          </div>
+        </section>
+        <section class="detail-panel" aria-live="polite"><span class="panel-kicker">PART INSPECTOR</span><h2 id="part-title">SELECT A COMPONENT</h2><p id="part-description">Choose a part in the list or click the model to see what it does.</p><span class="selection-note" id="part-spec">Real hardware references remain available below.</span></section>
+      </aside>
+    </div>
+    <div class="sources">
+      <figure class="source"><img src="/assets/hydraulic-cad-hd.webp" alt="Team hydraulic teaching test bench CAD assembly render" loading="lazy"><figcaption><strong>TEAM CAD ASSEMBLY</strong><span>Reference image from the project presentation</span></figcaption></figure>
+      <figure class="source"><img src="/assets/hydraulic-prototype-hd.webp" alt="Actual completed hydraulic teaching test bench" loading="lazy"><figcaption><strong>BUILT PROTOTYPE</strong><span>The completed physical teaching rig</span></figcaption></figure>
+    </div>
+    <p class="caveat"><strong>Model context:</strong> This interactive 3D illustration was reconstructed from documented component descriptions and project photographs. It is not the original SolidWorks assembly, is not dimensionally accurate, and does not demonstrate assembly tolerances or measured fit. A source CAD export is needed for an exact exploded view.</p>
+    <footer class="bottom"><a href="/#portfolio?project=savonia-hydraulic-bench">← HYDRAULIC TEST BENCH CASE STUDY</a><span>SN / ENGINEERING · SAVONIA UAS RDI 2026</span></footer>
+  </main>
+  <script>
+  window.addEventListener("load",function(){
+    window.setTimeout(function(){
+      if(window.__hydraulic3dReady)return;
+      var loading=document.getElementById("loading"),fallback=document.getElementById("fallback");
+      if(loading){loading.hidden=true;loading.style.display="none"}
+      if(fallback){fallback.hidden=false;fallback.style.display="flex"}
+    },8500)
+  })
+  </script>
+  <script type="module" src="/assets/hydraulic-exploded.js"></script>
+</body>
+</html>

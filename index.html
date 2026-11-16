@@ -6,6 +6,9 @@
   <meta name="description" content="Sibly Noman is a mechanical engineering student at Savonia UAS in Kuopio. Explore his work across hydraulic systems, CFD, aerospace research and sustainable engineering.">
   <meta name="author" content="Sibly Noman"><meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#f1f6f8" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0e1e29" media="(prefers-color-scheme: dark)"><meta name="color-scheme" content="light dark">
   <link rel="canonical" href="https://nomansibly.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <meta property="og:type" content="profile"><meta property="og:title" content="Sibly Noman | Mechanical Engineering Portfolio"><meta property="og:description" content="A personal engineering portfolio: hands-on mechanical systems, research, CFD and aerospace work by Sibly Noman.">
   <meta property="og:url" content="https://nomansibly.github.io/">
   <meta property="og:image" content="https://nomansibly.github.io/assets/indoor-air-cfd.png">
@@ -360,9 +363,118 @@ html{scroll-padding-top:148px}
 @media(max-width:900px){.hero-opportunity{grid-template-columns:1fr;gap:9px}.hero-opportunity a{justify-self:start}}
 @media(max-width:470px){.hero-opportunity{padding:13px}.hero-opportunity p{font-size:13px}.hero-expertise span{font-size:9px}}
 
+
+/* KINETIC ENGINEERING / distinctive dark-first visual system */
+:root{--display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--bodyfont:"Manrope",system-ui,-apple-system,sans-serif}
+body.dark{color-scheme:dark;--paper:#080c14;--panel:#101827;--ink:#f1f5fc;--muted:#adbbcc;--line:#344259;--accent:#ff577d;--green:#67dedc;--soft:#172233}
+body:not(.dark){color-scheme:light;--paper:#edf2f9;--panel:#fff;--ink:#182338;--muted:#57677d;--line:#bfcbdd;--accent:#cc315c;--green:#0c7183;--soft:#dde8f2}
+body{background:var(--paper);color:var(--ink);font-family:var(--bodyfont);font-size:14px;line-height:1.65}
+body.dark{background-image:radial-gradient(ellipse 65% 380px at 88% 160px,#fb416015,transparent 90%),radial-gradient(ellipse 70% 470px at 10% 690px,#3cacc312,transparent 90%);background-repeat:no-repeat}
+h1,h2,h3,.proof strong,.honour strong,.event h3,.certificate-card strong,.project h3,.hardware-card h3,.journey-heading h2,.recognition-intro h2{font-family:var(--display);font-weight:800;letter-spacing:.015em}
+h1,h2,.section-head h2,.journey-heading h2,.recognition-intro h2{text-transform:uppercase}
+.hero-copy h1{font-family:var(--display);font-size:clamp(56px,5.85vw,86px);font-weight:900;line-height:.89;letter-spacing:.003em;text-transform:uppercase;margin:21px 0 24px}
+.hero-copy h1 em{font-style:normal;color:var(--accent);font-weight:900;text-shadow:0 0 36px #ff577d38}
+.section-head>h2{font-family:var(--display);font-size:clamp(36px,4.4vw,56px);font-weight:800;letter-spacing:.01em;line-height:1}
+.section-head{border-left:3px solid var(--accent)}
+.section-head>.index{color:var(--accent)}
+.section-head>.section-intro{font-size:13px;max-width:740px}
+.project h3,.hardware-card h3,.article-card h3{font-family:var(--display);font-size:clamp(25px,2.5vw,34px);font-weight:800;letter-spacing:.01em;line-height:1.02}
+.eyebrow,.index,.meta,.proof span,.portrait-eyebrow,.hero-expertise span{letter-spacing:.1em}
+.hero-kicker{font-size:11px;letter-spacing:.12em;color:var(--green)}
+.hero-copy .intro{font:500 14px/1.85 var(--bodyfont);color:var(--muted);max-width:590px}
+.proof strong{font-size:30px;line-height:1}
+.proof-item{border-color:var(--line);padding-block:18px}
+.proof-item:hover{background:color-mix(in srgb,var(--accent) 7%,var(--panel))}
+.tab,.quick a,.quick .print-button{font-family:var(--bodyfont);font-weight:800}
+header{background:color-mix(in srgb,var(--paper) 97%,#03050b);border-bottom:1px solid var(--line);box-shadow:0 10px 34px #00000018}
+body.dark header{background:#0b111c}
+.topline{background:#080c14;color:#b1c3d5;border-color:#2c3b50}
+.head .wordmark{font-family:var(--display);font-size:22px;font-weight:900;letter-spacing:.045em;color:var(--ink)}
+.head .wordmark b{color:var(--accent)}
+.tab{background:transparent;color:var(--muted);letter-spacing:.01em;border-radius:3px 3px 0 0;font-size:11.5px}
+.tab:hover,.tab:focus-visible{background:color-mix(in srgb,var(--green) 12%,var(--panel));color:var(--ink)}
+.tab[aria-current=page]{background:color-mix(in srgb,var(--accent) 13%,var(--panel));border-bottom-color:var(--accent);color:var(--ink)}
+.quick a,.quick .print-button,.quick .icon-button{display:inline-flex;gap:5px;align-items:center;justify-content:center;background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:20px;padding:8px 12px;font:800 10px/1.2 var(--bodyfont)}
+.quick a:hover,.quick .icon-button:hover,.quick a:focus-visible{background:color-mix(in srgb,var(--accent) 14%,var(--panel));border-color:var(--accent);color:var(--ink)}
+.quick a svg,.quick .icon-button svg{width:15px;height:15px;flex:none}
+.quick .icon-button{width:37px;height:37px;padding:7px;border-radius:50%}
+body.dark .theme-moon,body:not(.dark) .theme-sun{display:none}
+body.dark .theme-sun,body:not(.dark) .theme-moon{display:block}
+.button,.kinetic-link{font:800 11px/1.2 var(--bodyfont);letter-spacing:.035em}
+.button{border-color:var(--accent);background:var(--accent);color:#10111a;border-radius:24px;padding:12px 18px}
+.button:hover{background:color-mix(in srgb,var(--accent) 84%,white);color:#10111a;border-color:var(--accent)}
+.button.secondary{border-color:var(--line);background:transparent;color:var(--ink)}
+.button.secondary:hover{border-color:var(--green);color:var(--green)}
+.hero-opportunity{border-radius:10px;border-left:3px solid var(--accent);background:var(--panel)}
+.hero-opportunity-label{color:var(--green)}
+.hero-opportunity-dot{background:var(--green);box-shadow:0 0 0 5px #67dedc16}
+.hero-opportunity a{border-radius:22px;background:var(--accent);color:#111521}
+.hero-opportunity a:hover{color:#111521}
+.hero-expertise span{background:transparent;color:var(--muted);border-radius:22px;border-color:var(--line);padding:8px 10px}
+.portrait-frame{border:1px solid var(--line);border-radius:18px;isolation:isolate;background:radial-gradient(circle at 50% 42%,#38496d8f,transparent 70%),linear-gradient(145deg,var(--panel),var(--soft))}
+.portrait-arch{border-color:color-mix(in srgb,var(--accent) 50%,var(--line));background:radial-gradient(circle at 50% 20%,#ff577d1c,transparent 76%);opacity:.85}
+.portrait-frame::before{border-color:color-mix(in srgb,var(--line) 65%,transparent);border-radius:12px}
+.portrait-caption{background:#0d1524;color:#f3f8fc;box-shadow:0 -8px 30px #0004}
+.portrait-caption strong{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:.035em;color:#fff;text-transform:uppercase}
+.portrait-caption span{color:#bed1e6}
+.portrait-work a{background:var(--panel);border:1px solid var(--line);border-radius:9px}
+.portrait-work a:hover,.portrait-work a:focus-visible{border-color:var(--accent);box-shadow:0 8px 18px #0002}
+.portrait-work strong{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.015em}
+.portrait-work strong span{color:var(--accent)}
+.project,.hardware-card,.article-card,.certificate-card{border-color:var(--line);border-radius:10px;overflow:hidden}
+.project,.hardware-card,.article-card{box-shadow:0 12px 30px #00000010}
+.project .media-label,.media-label{color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:20px;letter-spacing:.07em}
+.project .tag,.tag{border-color:var(--line);color:var(--muted)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.contact-panel{background:#111f32;border-color:#3d526d;border-radius:12px}
+.contact-introduction h2{font-family:var(--display);font-size:46px;font-weight:800;text-transform:uppercase}
+.certificate-card:hover{border-color:var(--accent)}
+body.dark .certificate-card .cert-link{color:var(--green)}
+.filter[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#151421}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.project:not(.featured),.hardware-card,.article-card{transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}.project:not(.featured):hover,.hardware-card:hover,.article-card:hover{transform:perspective(1000px) translateY(-5px) rotateX(1.2deg);border-color:var(--accent);box-shadow:0 18px 38px #00000022}}
+/* Layered 3D project gallery: a gentle pointer tilt and independent floating tiles */
+.kinetic-showcase{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(18px,3vw,42px);align-items:center;padding:34px clamp(20px,3vw,42px);margin:30px 0 44px;background:linear-gradient(120deg,color-mix(in srgb,var(--panel) 93%,var(--accent) 7%),var(--panel) 62%,color-mix(in srgb,var(--panel) 88%,var(--green) 12%));border:1px solid var(--line);border-radius:18px;overflow:hidden;position:relative;isolation:isolate}
+.kinetic-showcase:before{content:"";position:absolute;z-index:-1;inset:auto -9% -45% 20%;height:250px;background:radial-gradient(ellipse,#ff577d18,transparent 69%);filter:blur(25px);pointer-events:none}
+.kinetic-copy{position:relative;z-index:2}
+.kinetic-eyebrow{display:flex;align-items:center;gap:9px;color:var(--green);font:800 10px/1.4 var(--bodyfont);letter-spacing:.11em;margin-bottom:14px}
+.kinetic-light{height:7px;width:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 11px 4px #ff577d55}
+.kinetic-copy h2{font:900 clamp(48px,5.2vw,76px)/.87 var(--display);letter-spacing:.01em;text-transform:uppercase;max-width:500px;margin:0 0 22px}
+.kinetic-copy h2 span{color:var(--accent);white-space:nowrap}
+.kinetic-copy h2 .kinetic-dot{color:var(--green)}
+.kinetic-copy>p{font:500 13px/1.8 var(--bodyfont);color:var(--muted);max-width:365px;margin-bottom:18px}
+.kinetic-disciplines{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:21px}
+.kinetic-disciplines span{display:inline-flex;gap:7px;align-items:center;padding:7px 9px;border:1px solid var(--line);color:var(--ink);border-radius:22px;font:800 9px/1 var(--bodyfont);letter-spacing:.015em;background:color-mix(in srgb,var(--panel) 70%,transparent)}
+.kinetic-disciplines svg{height:14px;width:14px;color:var(--green)}
+.kinetic-link{display:inline-flex;align-items:center;gap:22px;border:1px solid var(--accent);padding:12px 16px;background:var(--accent);color:#140f16;text-decoration:none;border-radius:25px}
+.kinetic-link:hover,.kinetic-link:focus-visible{background:transparent;color:var(--accent)}
+.kinetic-hint{margin-top:22px;font:800 9px/1.5 var(--bodyfont);letter-spacing:.06em;color:var(--muted)}
+.kinetic-stage{min-height:395px;position:relative;perspective:1000px;--tilt-x:0deg;--tilt-y:0deg;touch-action:pan-y}
+.kinetic-grid{position:absolute;inset:10px 0 0 5%;opacity:.32;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:37px 37px;mask-image:linear-gradient(180deg,transparent 0%,black 22%,black 70%,transparent 100%);pointer-events:none}
+.kinetic-stack{height:380px;position:relative;transform-style:preserve-3d;transform:rotateX(var(--tilt-x)) rotateY(var(--tilt-y));transition:transform .24s ease-out}
+.kinetic-tile{position:absolute;display:block;width:55%;height:280px;max-width:310px;transform-style:preserve-3d;outline-offset:5px;text-decoration:none;color:#f5f7fc;border-radius:13px;border:1px solid #526477;box-shadow:0 24px 55px #0009;transition:filter .25s,border-color .25s,box-shadow .25s;backface-visibility:hidden}
+.kinetic-tile:after{content:"";position:absolute;inset:-1px;border-radius:13px;background:linear-gradient(125deg,#ffffff14,transparent 40%,#7cdaec14);pointer-events:none}
+.kinetic-tile:hover,.kinetic-tile:focus-visible{z-index:9;border-color:var(--green);filter:brightness(1.12);box-shadow:0 30px 60px #000a,0 0 21px #67dedc35}
+.kinetic-tile-inner{display:block;position:relative;width:100%;height:100%;overflow:hidden;border-radius:12px;background:#142136;animation:kineticFloat 7s ease-in-out infinite alternate;animation-delay:var(--float-delay,0s)}
+.kinetic-tile img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;background:#101825}
+.kinetic-tile.tile-tbm img{object-fit:contain}
+.kinetic-tile.tile-aircraft img{object-fit:contain}
+.kinetic-tile .tile-caption{position:absolute;display:flex;flex-direction:column;justify-content:flex-end;gap:3px;bottom:0;left:0;right:0;padding:16px 13px 12px;background:linear-gradient(transparent,#060b18f5);color:#effaff}
+.kinetic-tile .tile-caption small{font:800 9px/1.3 var(--bodyfont);letter-spacing:.09em;color:#b8f3ef}
+.kinetic-tile .tile-caption strong{font:800 22px/1 var(--display);letter-spacing:.04em}
+.kinetic-tile.tile-tbm{left:4%;top:54px;z-index:1;transform:rotate(-13deg) rotateY(-15deg);--float-delay:-2s}
+.kinetic-tile.tile-aircraft{right:4%;top:12px;z-index:2;transform:rotate(11deg) rotateY(13deg);--float-delay:-4s}
+.kinetic-tile.tile-hydraulic{left:28%;top:98px;z-index:3;transform:rotate(-1deg) translateZ(55px);--float-delay:-1s;border-color:#ff577d8f}
+.kinetic-tile.tile-hydraulic .tile-caption small{color:#ffb4c4}
+.kinetic-axis{position:absolute;right:0;bottom:0;color:var(--muted);font:800 9px/1 var(--bodyfont);letter-spacing:.12em}
+@keyframes kineticFloat{0%{transform:translateY(0)}100%{transform:translateY(-9px)}}
+@media(max-width:980px){.kinetic-showcase{grid-template-columns:1fr;gap:10px}.kinetic-copy h2{font-size:70px}.kinetic-copy>p{max-width:680px}.kinetic-stage{min-height:360px}.kinetic-stack{height:350px}.kinetic-tile{height:265px;width:52%}.kinetic-tile.tile-tbm{left:8%}.kinetic-tile.tile-aircraft{right:7%}.kinetic-tile.tile-hydraulic{left:29%}}
+@media(max-width:700px){.hero-copy h1{font-size:clamp(51px,11vw,72px)}.kinetic-showcase{margin:22px 0 32px;padding:23px 16px 20px}.kinetic-copy h2{font-size:clamp(51px,12vw,73px)}.kinetic-stage{min-height:315px}.kinetic-stack{height:310px}.kinetic-tile{height:220px;width:56%}.kinetic-tile.tile-tbm{left:2%;top:45px}.kinetic-tile.tile-aircraft{right:1%;top:14px}.kinetic-tile.tile-hydraulic{left:26%;top:82px}.kinetic-tile .tile-caption strong{font-size:19px}.kinetic-tile .tile-caption small{font-size:8px}}
+@media(max-width:470px){.hero-copy h1{font-size:clamp(47px,12vw,64px)}.kinetic-stage{min-height:270px}.kinetic-stack{height:264px}.kinetic-tile{height:180px;width:57%}.kinetic-tile .tile-caption{padding:9px}.kinetic-tile .tile-caption strong{font-size:16px}.kinetic-tile .tile-caption small{font-size:7px}.kinetic-copy h2{font-size:52px}.kinetic-hint{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.kinetic-tile-inner{animation:none}.kinetic-stack{transform:none!important;transition:none}.project:not(.featured),.hardware-card,.article-card{transition:none!important;transform:none!important}}
+
 </style>
 </head>
-<body>
+<body class="dark">
   <div class="topline"><div class="wrap"><span>MECHANICAL ENGINEERING · SELECTED WORK / 2026</span><span class="status">KUOPIO, FINLAND · SAVONIA UNIVERSITY OF APPLIED SCIENCES</span></div></div>
   <header><div class="wrap head">
     <a class="wordmark" href="#portfolio">SN<b> /</b> ENGINEERING</a>
@@ -374,7 +486,7 @@ html{scroll-padding-top:148px}
       <a class="tab" data-tab="about" href="#about">05 ABOUT & CV</a>
       <a class="tab" data-tab="certifications" href="#certifications">06 CERTIFICATIONS</a>
     </nav>
-    <div class="quick"><a href="mailto:sibly.noman2003@gmail.com" aria-label="Email Sibly Noman">EMAIL ↗</a><a href="https://github.com/nomansibly" aria-label="GitHub profile"><span class="external-label">GITHUB</span> ↗</a><a href="https://www.linkedin.com/in/nomansibly/" aria-label="LinkedIn profile"><span class="external-label">LINKEDIN</span> ↗</a><a class="print-button" id="download-cv" href="/assets/Sibly-Noman-CV.pdf" download aria-label="Download Sibly Noman CV as a PDF">CV PDF ↓</a><button class="icon-button" id="theme" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch theme">◐</button></div>
+    <div class="quick"><a href="mailto:sibly.noman2003@gmail.com" aria-label="Email Sibly Noman"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> EMAIL ↗</a><a href="https://github.com/nomansibly" aria-label="GitHub profile"><span class="external-label">GITHUB</span> ↗</a><a href="https://www.linkedin.com/in/nomansibly/" aria-label="LinkedIn profile"><span class="external-label">LINKEDIN</span> ↗</a><a class="print-button" id="download-cv" href="/assets/Sibly-Noman-CV.pdf" download aria-label="Download Sibly Noman CV as a PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v5h5M12 11v6m-3-3 3 3 3-3"/></svg> CV PDF ↓</a><button class="icon-button" id="theme" type="button" aria-label="Switch to light mode" aria-pressed="true" title="Switch theme"><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1a9 9 0 1 0 10 10z"/></svg></button></div>
   </div></header>
   <main id="main">
     <section class="panel" id="portfolio" data-panel="portfolio">
@@ -403,7 +515,37 @@ html{scroll-padding-top:148px}
         </div>
       </div>
         <div class="proof"><div class="proof-item"><strong>3 IEEE papers</strong><span>Published research · 2022</span></div><div class="proof-item"><strong>2nd place</strong><span>Project Management Championship Finland · 2026</span></div><div class="proof-item"><strong>IPMA Level D</strong><span>Project management</span></div><div class="proof-item"><strong>Top 5 global</strong><span>IMechE Sear Innovation Challenge</span></div></div>
-        <div class="journey reveal" data-reveal aria-label="Sibly Noman's engineering path">
+        
+        <section class="kinetic-showcase reveal" data-reveal aria-labelledby="kinetic-title">
+          <div class="kinetic-copy">
+            <div class="kinetic-eyebrow"><span class="kinetic-light" aria-hidden="true"></span> FIELD NOTES / SELECTED SYSTEMS</div>
+            <h2 id="kinetic-title">ENGINEERING<br><span>IN MOTION<span class="kinetic-dot">.</span></span></h2>
+            <p>From a physical hydraulic teaching rig to a tunnel boring machine prototype and an aircraft CAD study—real engineering work, seen from another angle.</p>
+            <div class="kinetic-disciplines" aria-label="Project disciplines">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M18.4 5.6l-2.1 2.1m-8.6 8.6-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg> HARDWARE</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Zm-9 10 9 5 9-5m-18 5 9 5 9-5"/></svg> CAD / SYSTEMS</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-16-4 24"/></svg> ENGINEERING DATA</span>
+            </div>
+            <a class="kinetic-link" href="#portfolio-work">EXPLORE SELECTED WORK <span aria-hidden="true">↗</span></a>
+            <div class="kinetic-hint">INTERACTIVE PROJECT CARDS <span aria-hidden="true">↗</span> HOVER OR TAP TO EXPLORE</div>
+          </div>
+          <div class="kinetic-stage" data-tilt-stage aria-label="Three dimensional layered project gallery">
+            <div class="kinetic-grid" aria-hidden="true"></div>
+            <div class="kinetic-stack">
+              <a class="kinetic-tile tile-tbm" href="#portfolio?project=micro-tbm" aria-label="Open the Bored Tunnelers micro-TBM project">
+                <span class="kinetic-tile-inner"><img src="/assets/tbm-cad-team.jpeg" alt="Bored Tunnelers tunnel boring machine CAD assembly" loading="lazy"><span class="tile-caption"><small>01 / CAD + PROTOTYPE</small><strong>MICRO-TBM</strong></span></span>
+              </a>
+              <a class="kinetic-tile tile-aircraft" href="#portfolio?project=a350-airworthiness" aria-label="Open the A350 aircraft CAD and engineering data project">
+                <span class="kinetic-tile-inner"><img src="/assets/a350-900-step-cad-preview.webp" alt="Airbus A350-900 3D CAD visualisation" loading="lazy"><span class="tile-caption"><small>02 / AEROSPACE</small><strong>A350-900 STUDY</strong></span></span>
+              </a>
+              <a class="kinetic-tile tile-hydraulic" href="#portfolio?project=savonia-hydraulic-bench" aria-label="Open the hydraulic rotational test bench project">
+                <span class="kinetic-tile-inner"><img src="/assets/hydraulic-built-prototype-2026.webp" alt="Built and commissioned Savonia hydraulic rotational teaching rig" loading="lazy"><span class="tile-caption"><small>03 / BUILT HARDWARE</small><strong>HYDRAULIC RIG</strong></span></span>
+              </a>
+            </div>
+            <div class="kinetic-axis" aria-hidden="true">X / Y / Z&nbsp;—&nbsp;DESIGN SPACE</div>
+          </div>
+        </section>
+<div class="journey reveal" data-reveal aria-label="Sibly Noman's engineering path">
           <div class="journey-heading"><div class="eyebrow">HOW I GOT HERE</div><h2>Different settings.<br>One systems view.</h2><p>From aerospace studies to mechanical design, research and sustainability work.</p></div>
           <div class="journey-track">
             <a class="journey-card" href="#about"><span class="journey-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 13 18-4-7 4-3 7-2-1 1-6-7 1z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span><span><time>2022—2024</time><strong>Aeronautics</strong><small>Universiti Teknologi Malaysia</small></span></a>
@@ -685,7 +827,7 @@ html{scroll-padding-top:148px}
       dialog.addEventListener("close",function(){var state=parseHash();if(state.project||state.article){history.replaceState(null,"","#"+currentRoute)}});
       // CV downloads link directly to a hosted PDF.
       var workLink=document.querySelector('a[href="#portfolio-work"]');if(workLink)workLink.addEventListener("click",function(event){event.preventDefault();document.getElementById("portfolio-work").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})});
-      var theme=document.getElementById("theme");try{if(localStorage.getItem("sn-theme")==="dark")document.body.classList.add("dark")}catch(e){}
+      var theme=document.getElementById("theme");try{if(localStorage.getItem("sn-theme")==="light")document.body.classList.remove("dark");else document.body.classList.add("dark")}catch(e){}
       function syncTheme(){var dark=document.body.classList.contains("dark");theme.setAttribute("aria-label",dark?"Switch to light mode":"Switch to dark mode");theme.setAttribute("aria-pressed",String(dark))}syncTheme();theme.addEventListener("click",function(){document.body.classList.toggle("dark");try{localStorage.setItem("sn-theme",document.body.classList.contains("dark")?"dark":"light")}catch(e){}syncTheme()});
       document.querySelectorAll(".filter[data-filter]").forEach(function(button){button.addEventListener("click",function(){var parent=button.closest("[role=group]");parent.querySelectorAll(".filter").forEach(function(b){b.setAttribute("aria-pressed",String(b===button))});var filter=button.dataset.filter;if(button.classList.contains("article-filter")){var shown=0;document.querySelectorAll(".article-card").forEach(function(card){var visible=filter==="all"||card.dataset.kind===filter;card.hidden=!visible;if(visible)shown++});return}var shown=0;document.querySelectorAll(".project").forEach(function(card){var cats=(card.dataset.category||"").split(" ");var visible=filter==="all"||cats.indexOf(filter)>=0;card.hidden=!visible;if(visible)shown++});document.getElementById("project-count").textContent="Showing "+shown+" project"+(shown===1?"":"s")})});
       document.getElementById("year").textContent=String(new Date().getFullYear());
@@ -698,6 +840,15 @@ html{scroll-padding-top:148px}
       function articleSections(markdown){var out=[],heading="Article",paragraph=[];function flush(){var text=paragraph.join(" ").trim();if(text)out.push({h:heading,p:text});paragraph=[]}String(markdown||"").split(/\r?\n/).forEach(function(line){var h=line.match(/^#{1,3}\s+(.+)/);if(h){flush();heading=h[1].trim()}else if(!line.trim()){flush()}else if(/^[-*+]\s+/.test(line)){paragraph.push("• "+line.replace(/^[-*+]\s+/,"").trim())}else{paragraph.push(line.replace(/\*\*/g,"").replace(/\*/g,"").replace(/\x60/g,""))}});flush();return out.length?out:[{h:"Article",p:""}]}
       function appendRemoteArticles(items){var archive=document.getElementById("article-list");if(!archive)return;window.ARTICLE_CONTENT=window.ARTICLE_CONTENT||{};items.forEach(function(item){if(!item.slug||document.querySelector('.article-card[data-id="'+CSS.escape(item.slug)+'"]'))return;window.ARTICLE_CONTENT[item.slug]={dek:item.summary||"",sections:articleSections(item.body)};var card=document.createElement("article");card.className="article-card";card.dataset.id=item.slug;card.dataset.kind=articleKind(item);var meta=document.createElement("div");meta.className="meta";var label=document.createElement("span");label.textContent="NEW · "+(item.category||"ENGINEERING").toUpperCase();var badge=document.createElement("span");badge.className="badge";badge.textContent="PUBLISHED";var read=document.createElement("span");read.className="badge read-time";read.textContent=Math.max(3,Math.ceil(String(item.body||"").trim().split(/\s+/).filter(Boolean).length/200))+" MIN READ";meta.append(label,badge,read);var title=document.createElement("h3");title.textContent=item.title;var summary=document.createElement("p");summary.textContent=item.summary||"A technical article by Sibly Noman.";var link=document.createElement("a");link.href="#blog?article="+encodeURIComponent(item.slug);link.textContent="READ ARTICLE ↗";card.append(meta,title,summary,link,makeShareTools(item.slug,item.title,item.summary||"Engineering article by Sibly Noman."));archive.prepend(card)});}
       fetch("https://noman-blog-studio.maroonsycamore1.chatgpt.site/api/articles",{mode:"cors",credentials:"omit"}).then(function(response){if(!response.ok)throw new Error("Article feed unavailable");return response.json()}).then(function(data){appendRemoteArticles(data.articles||[]);if(parseHash().article)renderRoute()}).catch(function(){});
+
+      (function(){
+        var stage=document.querySelector("[data-tilt-stage]");
+        if(!stage||!window.matchMedia||!window.matchMedia("(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference)").matches)return;
+        var raf=0,x=0,y=0;
+        function update(){stage.style.setProperty("--tilt-x",(-y*5).toFixed(2)+"deg");stage.style.setProperty("--tilt-y",(x*8).toFixed(2)+"deg");raf=0}
+        stage.addEventListener("pointermove",function(e){var r=stage.getBoundingClientRect();if(!r.width||!r.height)return;x=(e.clientX-r.left)/r.width-.5;y=(e.clientY-r.top)/r.height-.5;if(!raf)raf=window.requestAnimationFrame(update)});
+        stage.addEventListener("pointerleave",function(){x=0;y=0;if(!raf)raf=window.requestAnimationFrame(update)});
+      })();
       renderRoute();
     })();
   </script>
